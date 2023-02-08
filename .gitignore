@@ -349,7 +349,5 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
-/Projects/UploadFilesServer/UploadFilesServer/Resources/Files/*
-/Projects/PatientManagerService/src/PatientManagerService.Web/log*
-/Projects/PatientManagerService/src/PatientManagerService.Web/Resources/Uploads/*
-/Projects/PatientManagerService-Ref-Has-OriginalEntities/src/PatientManagerService.Web/log*
+/PatientManagerService/src/PatientManagerService.Web/log*
+/PatientManagerService/src/PatientManagerService.Web/Resources/Uploads/*
