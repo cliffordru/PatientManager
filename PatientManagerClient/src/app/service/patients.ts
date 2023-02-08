@@ -39,9 +39,8 @@ export class ApiService {
     );
   }
 
-  //TODO: move URI to config and wire up time permitting
   GetDes() {
-    return this.http.get('https://localhost:5001/api/designation');
+    //return this.http.get(`${this.apiurl}/designation`);
   }
 
   private handleError(err: HttpErrorResponse): Observable<never> {
