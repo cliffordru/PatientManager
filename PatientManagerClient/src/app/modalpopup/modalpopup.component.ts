@@ -27,11 +27,11 @@ export class ModalpopupComponent implements OnInit {
     }
   }
 
-  loadDes() {
+  /* loadDes() {
     this.service.GetDes().subscribe(result => {
       this.desdata = result;
     });
-  }
+  } */
 
   LoadEditData(id: any) {
     this.service.GetPatientbyId(id).subscribe(item => {
