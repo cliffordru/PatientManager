@@ -45,4 +45,4 @@ Test projects are organized based on the kind of test (unit, functional, integra
 
 # Patterns Used
 
-This solution template has code built in to support a few common patterns, especially Domain Driven Design patterns. 
+This solution has been built with a few common patterns, especially Domain Driven Design patterns. 

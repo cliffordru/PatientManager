@@ -30,4 +30,4 @@ The following are  instructions for installing the code.
 
 You can open your browser dev tools and throttle your connection to view the file upload progress % indicator
    
-If these steps don't work for you, or you run into issues, feel free to contact : [https://github.com/cliffordru](https://github.com/cliffordru) 
+If these steps don't work for you, or you run into issues, feel free to contact : [https://github.com/cliffordru/PatientManager](https://github.com/cliffordru/PatientManager) 
