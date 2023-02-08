@@ -6413,3 +6413,757 @@ FROM [Patients] AS [p]
 2023-02-08 14:29:06.858 -05:00 [INF] Executed action PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web) in 2.4379ms
 2023-02-08 14:29:06.858 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web)'
 2023-02-08 14:29:06.858 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/api/patients - - - 200 427 application/json;+charset=utf-8 3.8551ms
+2023-02-08 14:43:14.063 -05:00 [INF] User profile is available. Using 'C:\Users\cgray\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-02-08 14:43:14.958 -05:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-02-08 14:43:14.990 -05:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-02-08 14:43:15.161 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Patients] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-02-08 14:43:15.247 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-08 14:43:15.248 -05:00 [INF] Hosting environment: Development
+2023-02-08 14:43:15.248 -05:00 [INF] Content root path: C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web
+2023-02-08 14:43:15.273 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/ - -
+2023-02-08 14:43:15.326 -05:00 [WRN] Failed to determine the https port for redirect.
+2023-02-08 14:43:15.344 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web)'
+2023-02-08 14:43:15.348 -05:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller PatientManagerService.Web.Controllers.HomeController (PatientManagerService.Web).
+2023-02-08 14:43:15.355 -05:00 [INF] Executing ViewResult, running view Index.
+2023-02-08 14:43:15.484 -05:00 [INF] Executed ViewResult - view Index executed in 130.007ms.
+2023-02-08 14:43:15.487 -05:00 [INF] Executed action PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web) in 137.6666ms
+2023-02-08 14:43:15.487 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web)'
+2023-02-08 14:43:15.521 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/ - - - 200 - text/html;+charset=utf-8 249.7173ms
+2023-02-08 14:43:15.566 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/lib/bootstrap/dist/css/bootstrap.min.css - -
+2023-02-08 14:43:15.566 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - -
+2023-02-08 14:43:15.567 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/PatientManagerService.Web.styles.css?v=B-M4_Me8chgcXp-2dtuzM_UhmPuOP8cnpqqrivsjQvM - -
+2023-02-08 14:43:15.584 -05:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2023-02-08 14:43:15.584 -05:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\css\site.css'
+2023-02-08 14:43:15.585 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/lib/bootstrap/dist/css/bootstrap.min.css - - - 0 162726 text/css 19.0671ms
+2023-02-08 14:43:15.585 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - - - 0 194 text/css 19.3242ms
+2023-02-08 14:43:15.586 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2023-02-08 14:43:15.586 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2023-02-08 14:43:15.588 -05:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\js\site.js'
+2023-02-08 14:43:15.588 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 0 230 text/javascript 1.8519ms
+2023-02-08 14:43:15.593 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 6.4402ms
+2023-02-08 14:43:15.596 -05:00 [INF] Sending file. Request path: '/PatientManagerService.Web.styles.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\obj\Debug\net7.0\scopedcss\bundle\PatientManagerService.Web.styles.css'
+2023-02-08 14:43:15.596 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/PatientManagerService.Web.styles.css?v=B-M4_Me8chgcXp-2dtuzM_UhmPuOP8cnpqqrivsjQvM - - - 200 1142 text/css 29.8015ms
+2023-02-08 14:43:15.597 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2023-02-08 14:43:15.654 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 56.0977ms
+2023-02-08 14:43:15.687 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/favicon.ico - -
+2023-02-08 14:43:15.690 -05:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\favicon.ico'
+2023-02-08 14:43:15.691 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/favicon.ico - - - 0 5430 image/x-icon 3.6953ms
+2023-02-08 14:44:03.190 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/api/patients - -
+2023-02-08 14:44:03.192 -05:00 [INF] CORS policy execution successful.
+2023-02-08 14:44:03.194 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web)'
+2023-02-08 14:44:03.210 -05:00 [INF] Route matched with {action = "List", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List() on controller PatientManagerService.Web.Api.PatientsController (PatientManagerService.Web).
+2023-02-08 14:44:03.495 -05:00 [INF] Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Birthday], [p].[FirstName], [p].[Gender], [p].[LastName]
+FROM [Patients] AS [p]
+2023-02-08 14:44:03.696 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientManagerService.Web.ApiModels.PatientDTO, PatientManagerService.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-02-08 14:44:03.922 -05:00 [INF] Executed action PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web) in 711.6791ms
+2023-02-08 14:44:03.922 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web)'
+2023-02-08 14:44:03.932 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/api/patients - - - 200 427 application/json;+charset=utf-8 742.2592ms
+2023-02-08 14:44:14.971 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/api/patients - -
+2023-02-08 14:44:14.972 -05:00 [INF] CORS policy execution successful.
+2023-02-08 14:44:14.973 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web)'
+2023-02-08 14:44:14.974 -05:00 [INF] Route matched with {action = "List", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List() on controller PatientManagerService.Web.Api.PatientsController (PatientManagerService.Web).
+2023-02-08 14:44:14.981 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Birthday], [p].[FirstName], [p].[Gender], [p].[LastName]
+FROM [Patients] AS [p]
+2023-02-08 14:44:14.983 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientManagerService.Web.ApiModels.PatientDTO, PatientManagerService.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-02-08 14:44:14.984 -05:00 [INF] Executed action PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web) in 9.3657ms
+2023-02-08 14:44:14.984 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web)'
+2023-02-08 14:44:14.985 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/api/patients - - - 200 2 application/json;+charset=utf-8 14.4582ms
+2023-02-08 14:44:21.577 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:57678/api/patients multipart/form-data;+boundary=---------------------------33771102431213984238947224647 427
+2023-02-08 14:44:21.578 -05:00 [INF] CORS policy execution successful.
+2023-02-08 14:44:21.578 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Api.PatientsController.UploadPatients (PatientManagerService.Web)'
+2023-02-08 14:44:21.587 -05:00 [INF] Route matched with {action = "patients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UploadPatients(Microsoft.AspNetCore.Http.IFormFile, System.Threading.CancellationToken) on controller PatientManagerService.Web.Api.PatientsController (PatientManagerService.Web).
+2023-02-08 14:44:21.715 -05:00 [INF] Executed DbCommand (12ms) [Parameters=[@__patient_FirstName_0='?' (Size = 35), @__patient_LastName_1='?' (Size = 35), @__patient_Birthday_2='?' (Size = 30), @__patient_Gender_3='?' (Size = 10)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Patients] AS [p]
+        WHERE [p].[FirstName] = @__patient_FirstName_0 AND [p].[LastName] = @__patient_LastName_1 AND [p].[Birthday] = @__patient_Birthday_2 AND [p].[Gender] = @__patient_Gender_3) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-02-08 14:44:21.721 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__patient_FirstName_0='?' (Size = 35), @__patient_LastName_1='?' (Size = 35), @__patient_Birthday_2='?' (Size = 30), @__patient_Gender_3='?' (Size = 10)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Patients] AS [p]
+        WHERE [p].[FirstName] = @__patient_FirstName_0 AND [p].[LastName] = @__patient_LastName_1 AND [p].[Birthday] = @__patient_Birthday_2 AND [p].[Gender] = @__patient_Gender_3) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-02-08 14:44:21.722 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__patient_FirstName_0='?' (Size = 35), @__patient_LastName_1='?' (Size = 35), @__patient_Birthday_2='?' (Size = 30), @__patient_Gender_3='?' (Size = 10)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Patients] AS [p]
+        WHERE [p].[FirstName] = @__patient_FirstName_0 AND [p].[LastName] = @__patient_LastName_1 AND [p].[Birthday] = @__patient_Birthday_2 AND [p].[Gender] = @__patient_Gender_3) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-02-08 14:44:21.723 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__patient_FirstName_0='?' (Size = 35), @__patient_LastName_1='?' (Size = 35), @__patient_Birthday_2='?' (Size = 30), @__patient_Gender_3='?' (Size = 10)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Patients] AS [p]
+        WHERE [p].[FirstName] = @__patient_FirstName_0 AND [p].[LastName] = @__patient_LastName_1 AND [p].[Birthday] = @__patient_Birthday_2 AND [p].[Gender] = @__patient_Gender_3) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-02-08 14:44:21.724 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__patient_FirstName_0='?' (Size = 35), @__patient_LastName_1='?' (Size = 35), @__patient_Birthday_2='?' (Size = 30), @__patient_Gender_3='?' (Size = 10)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Patients] AS [p]
+        WHERE [p].[FirstName] = @__patient_FirstName_0 AND [p].[LastName] = @__patient_LastName_1 AND [p].[Birthday] = @__patient_Birthday_2 AND [p].[Gender] = @__patient_Gender_3) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-02-08 14:44:21.725 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[@__patient_FirstName_0='?' (Size = 35), @__patient_LastName_1='?' (Size = 35), @__patient_Birthday_2='?' (Size = 30), @__patient_Gender_3='?' (Size = 10)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Patients] AS [p]
+        WHERE [p].[FirstName] = @__patient_FirstName_0 AND [p].[LastName] = @__patient_LastName_1 AND [p].[Birthday] = @__patient_Birthday_2 AND [p].[Gender] = @__patient_Gender_3) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-02-08 14:44:21.811 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 30), @p1='?' (Size = 35), @p2='?' (Size = 10), @p3='?' (Size = 35), @p4='?' (Size = 30), @p5='?' (Size = 35), @p6='?' (Size = 10), @p7='?' (Size = 35), @p8='?' (Size = 30), @p9='?' (Size = 35), @p10='?' (Size = 10), @p11='?' (Size = 35), @p12='?' (Size = 30), @p13='?' (Size = 35), @p14='?' (Size = 10), @p15='?' (Size = 35), @p16='?' (Size = 30), @p17='?' (Size = 35), @p18='?' (Size = 10), @p19='?' (Size = 35), @p20='?' (Size = 30), @p21='?' (Size = 35), @p22='?' (Size = 10), @p23='?' (Size = 35)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [Patients] USING (
+VALUES (@p0, @p1, @p2, @p3, 0),
+(@p4, @p5, @p6, @p7, 1),
+(@p8, @p9, @p10, @p11, 2),
+(@p12, @p13, @p14, @p15, 3),
+(@p16, @p17, @p18, @p19, 4),
+(@p20, @p21, @p22, @p23, 5)) AS i ([Birthday], [FirstName], [Gender], [LastName], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Birthday], [FirstName], [Gender], [LastName])
+VALUES (i.[Birthday], i.[FirstName], i.[Gender], i.[LastName])
+OUTPUT INSERTED.[Id], i._Position;
+2023-02-08 14:44:21.833 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2023-02-08 14:44:21.834 -05:00 [INF] Executed action PatientManagerService.Web.Api.PatientsController.UploadPatients (PatientManagerService.Web) in 246.2842ms
+2023-02-08 14:44:21.834 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Api.PatientsController.UploadPatients (PatientManagerService.Web)'
+2023-02-08 14:44:21.834 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:57678/api/patients multipart/form-data;+boundary=---------------------------33771102431213984238947224647 427 - 200 1 application/json;+charset=utf-8 257.0270ms
+2023-02-08 14:52:45.367 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/index.html - -
+2023-02-08 14:52:45.449 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/index.html - - - 200 - text/html;charset=utf-8 82.0288ms
+2023-02-08 14:52:45.488 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui.css - -
+2023-02-08 14:52:45.490 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2023-02-08 14:52:45.492 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 2.3977ms
+2023-02-08 14:52:45.494 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2023-02-08 14:52:45.500 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-02-08 14:52:45.502 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui.css - - - 200 143943 text/css 14.7568ms
+2023-02-08 14:52:45.559 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 64.6652ms
+2023-02-08 14:52:45.645 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/favicon-16x16.png - -
+2023-02-08 14:52:45.646 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2023-02-08 14:52:45.646 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/favicon-16x16.png - - - 200 665 image/png 1.0833ms
+2023-02-08 14:52:45.700 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - -
+2023-02-08 14:52:45.820 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 119.7528ms
+2023-02-08 14:59:30.230 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/api/patients - -
+2023-02-08 14:59:30.230 -05:00 [INF] CORS policy execution successful.
+2023-02-08 14:59:30.230 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web)'
+2023-02-08 14:59:30.231 -05:00 [INF] Route matched with {action = "List", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List() on controller PatientManagerService.Web.Api.PatientsController (PatientManagerService.Web).
+2023-02-08 14:59:30.250 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Birthday], [p].[FirstName], [p].[Gender], [p].[LastName]
+FROM [Patients] AS [p]
+2023-02-08 14:59:30.251 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientManagerService.Web.ApiModels.PatientDTO, PatientManagerService.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-02-08 14:59:30.252 -05:00 [INF] Executed action PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web) in 21.1989ms
+2023-02-08 14:59:30.252 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web)'
+2023-02-08 14:59:30.252 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/api/patients - - - 200 512 application/json;+charset=utf-8 22.6322ms
+2023-02-08 15:07:25.720 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/index.html - -
+2023-02-08 15:07:25.741 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/index.html - - - 200 - text/html;charset=utf-8 20.8890ms
+2023-02-08 15:07:25.807 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2023-02-08 15:07:25.808 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 1.4519ms
+2023-02-08 15:07:25.809 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2023-02-08 15:07:25.864 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 55.4245ms
+2023-02-08 15:07:26.215 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/favicon-16x16.png - -
+2023-02-08 15:07:26.218 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2023-02-08 15:07:26.218 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/favicon-16x16.png - - - 0 665 image/png 2.9379ms
+2023-02-08 15:07:26.382 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - -
+2023-02-08 15:07:26.393 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 10.5220ms
+2023-02-08 15:07:27.687 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/ - -
+2023-02-08 15:07:27.688 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web)'
+2023-02-08 15:07:27.689 -05:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller PatientManagerService.Web.Controllers.HomeController (PatientManagerService.Web).
+2023-02-08 15:07:27.692 -05:00 [INF] Executing ViewResult, running view Index.
+2023-02-08 15:07:27.708 -05:00 [INF] Executed ViewResult - view Index executed in 17.9415ms.
+2023-02-08 15:07:27.709 -05:00 [INF] Executed action PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web) in 19.7713ms
+2023-02-08 15:07:27.709 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web)'
+2023-02-08 15:07:27.712 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/ - - - 200 - text/html;+charset=utf-8 25.2592ms
+2023-02-08 15:07:27.747 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2023-02-08 15:07:27.750 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2023-02-08 15:07:27.750 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/PatientManagerService.Web.styles.css?v=B-M4_Me8chgcXp-2dtuzM_UhmPuOP8cnpqqrivsjQvM - -
+2023-02-08 15:07:27.750 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2023-02-08 15:07:27.751 -05:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\js\site.js'
+2023-02-08 15:07:27.751 -05:00 [INF] Sending file. Request path: '/PatientManagerService.Web.styles.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\obj\Debug\net7.0\scopedcss\bundle\PatientManagerService.Web.styles.css'
+2023-02-08 15:07:27.751 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 text/javascript 1.2222ms
+2023-02-08 15:07:27.751 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/PatientManagerService.Web.styles.css?v=B-M4_Me8chgcXp-2dtuzM_UhmPuOP8cnpqqrivsjQvM - - - 200 1142 text/css 1.3512ms
+2023-02-08 15:07:27.752 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 1.4146ms
+2023-02-08 15:07:27.800 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 52.7705ms
+2023-02-08 15:07:27.808 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/favicon.ico - -
+2023-02-08 15:07:27.810 -05:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\favicon.ico'
+2023-02-08 15:07:27.810 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/favicon.ico - - - 200 5430 image/x-icon 2.4920ms
+2023-02-08 15:07:42.117 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger - -
+2023-02-08 15:07:42.119 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger - - - 0 - - 1.5341ms
+2023-02-08 15:07:42.133 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/index.html - -
+2023-02-08 15:07:42.147 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/index.html - - - 200 - text/html;charset=utf-8 13.6425ms
+2023-02-08 15:07:42.185 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2023-02-08 15:07:42.185 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2023-02-08 15:07:42.187 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 1.3698ms
+2023-02-08 15:07:42.243 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 58.2677ms
+2023-02-08 15:07:42.297 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/favicon-16x16.png - -
+2023-02-08 15:07:42.297 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2023-02-08 15:07:42.298 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/favicon-16x16.png - - - 200 665 image/png 0.9015ms
+2023-02-08 15:07:42.402 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - -
+2023-02-08 15:07:42.408 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 5.8907ms
+2023-02-08 15:07:55.363 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/api/patients - -
+2023-02-08 15:07:55.363 -05:00 [INF] CORS policy execution successful.
+2023-02-08 15:07:55.364 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web)'
+2023-02-08 15:07:55.367 -05:00 [INF] Route matched with {action = "List", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List() on controller PatientManagerService.Web.Api.PatientsController (PatientManagerService.Web).
+2023-02-08 15:07:55.383 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Birthday], [p].[FirstName], [p].[Gender], [p].[LastName]
+FROM [Patients] AS [p]
+2023-02-08 15:07:55.384 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientManagerService.Web.ApiModels.PatientDTO, PatientManagerService.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-02-08 15:07:55.384 -05:00 [INF] Executed action PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web) in 16.8062ms
+2023-02-08 15:07:55.384 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web)'
+2023-02-08 15:07:55.384 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/api/patients - - - 200 512 application/json;+charset=utf-8 21.2004ms
+2023-02-08 15:15:41.470 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/ - -
+2023-02-08 15:15:41.471 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web)'
+2023-02-08 15:15:41.471 -05:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller PatientManagerService.Web.Controllers.HomeController (PatientManagerService.Web).
+2023-02-08 15:15:41.472 -05:00 [INF] Executing ViewResult, running view Index.
+2023-02-08 15:15:41.480 -05:00 [INF] Executed ViewResult - view Index executed in 8.7068ms.
+2023-02-08 15:15:41.480 -05:00 [INF] Executed action PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web) in 9.1538ms
+2023-02-08 15:15:41.480 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web)'
+2023-02-08 15:15:41.481 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/ - - - 200 - text/html;+charset=utf-8 11.5508ms
+2023-02-08 15:15:41.535 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/lib/bootstrap/dist/css/bootstrap.min.css - -
+2023-02-08 15:15:41.536 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - -
+2023-02-08 15:15:41.537 -05:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2023-02-08 15:15:41.537 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/lib/bootstrap/dist/css/bootstrap.min.css - - - 0 162726 text/css 1.9393ms
+2023-02-08 15:15:41.539 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/PatientManagerService.Web.styles.css?v=B-M4_Me8chgcXp-2dtuzM_UhmPuOP8cnpqqrivsjQvM - -
+2023-02-08 15:15:41.540 -05:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\css\site.css'
+2023-02-08 15:15:41.540 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - - - 0 194 text/css 3.8870ms
+2023-02-08 15:15:41.541 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2023-02-08 15:15:41.542 -05:00 [INF] Sending file. Request path: '/PatientManagerService.Web.styles.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\obj\Debug\net7.0\scopedcss\bundle\PatientManagerService.Web.styles.css'
+2023-02-08 15:15:41.544 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/PatientManagerService.Web.styles.css?v=B-M4_Me8chgcXp-2dtuzM_UhmPuOP8cnpqqrivsjQvM - - - 200 1142 text/css 4.1734ms
+2023-02-08 15:15:41.547 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2023-02-08 15:15:41.549 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 1.8827ms
+2023-02-08 15:15:41.590 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 48.6197ms
+2023-02-08 15:15:41.614 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/favicon.ico - -
+2023-02-08 15:15:41.615 -05:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\favicon.ico'
+2023-02-08 15:15:41.615 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/favicon.ico - - - 200 5430 image/x-icon 1.1014ms
+2023-02-08 15:15:46.884 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/index.html - -
+2023-02-08 15:15:46.897 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/index.html - - - 200 - text/html;charset=utf-8 13.0519ms
+2023-02-08 15:15:46.939 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui.css - -
+2023-02-08 15:15:46.948 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-02-08 15:15:46.956 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2023-02-08 15:15:46.958 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2023-02-08 15:15:46.958 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui.css - - - 200 143943 text/css 19.4786ms
+2023-02-08 15:15:46.960 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 1.7019ms
+2023-02-08 15:15:47.006 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 50.0009ms
+2023-02-08 15:15:47.088 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/favicon-16x16.png - -
+2023-02-08 15:15:47.090 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2023-02-08 15:15:47.090 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/favicon-16x16.png - - - 0 665 image/png 2.7082ms
+2023-02-08 15:15:47.194 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - -
+2023-02-08 15:15:47.197 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 3.4949ms
+2023-02-08 15:20:24.270 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/ - -
+2023-02-08 15:20:24.270 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web)'
+2023-02-08 15:20:24.271 -05:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller PatientManagerService.Web.Controllers.HomeController (PatientManagerService.Web).
+2023-02-08 15:20:24.271 -05:00 [INF] Executing ViewResult, running view Index.
+2023-02-08 15:20:24.280 -05:00 [INF] Executed ViewResult - view Index executed in 9.3161ms.
+2023-02-08 15:20:24.280 -05:00 [INF] Executed action PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web) in 9.552ms
+2023-02-08 15:20:24.280 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web)'
+2023-02-08 15:20:24.281 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/ - - - 200 - text/html;+charset=utf-8 11.8240ms
+2023-02-08 15:20:24.352 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2023-02-08 15:20:24.356 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 3.8490ms
+2023-02-08 15:20:24.363 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - -
+2023-02-08 15:20:24.367 -05:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\css\site.css'
+2023-02-08 15:20:24.367 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2023-02-08 15:20:24.367 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - - - 0 194 text/css 3.7242ms
+2023-02-08 15:20:24.367 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2023-02-08 15:20:24.368 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/PatientManagerService.Web.styles.css?v=B-M4_Me8chgcXp-2dtuzM_UhmPuOP8cnpqqrivsjQvM - -
+2023-02-08 15:20:24.369 -05:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\js\site.js'
+2023-02-08 15:20:24.369 -05:00 [INF] Sending file. Request path: '/PatientManagerService.Web.styles.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\obj\Debug\net7.0\scopedcss\bundle\PatientManagerService.Web.styles.css'
+2023-02-08 15:20:24.370 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/PatientManagerService.Web.styles.css?v=B-M4_Me8chgcXp-2dtuzM_UhmPuOP8cnpqqrivsjQvM - - - 0 1142 text/css 1.5688ms
+2023-02-08 15:20:24.370 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 text/javascript 2.4920ms
+2023-02-08 15:20:24.420 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 52.6358ms
+2023-02-08 15:20:24.444 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/favicon.ico - -
+2023-02-08 15:20:24.445 -05:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\favicon.ico'
+2023-02-08 15:20:24.445 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/favicon.ico - - - 200 5430 image/x-icon 1.0699ms
+2023-02-08 15:20:35.054 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/ - -
+2023-02-08 15:20:35.055 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web)'
+2023-02-08 15:20:35.056 -05:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller PatientManagerService.Web.Controllers.HomeController (PatientManagerService.Web).
+2023-02-08 15:20:35.056 -05:00 [INF] Executing ViewResult, running view Index.
+2023-02-08 15:20:35.065 -05:00 [INF] Executed ViewResult - view Index executed in 9.3391ms.
+2023-02-08 15:20:35.065 -05:00 [INF] Executed action PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web) in 9.6487ms
+2023-02-08 15:20:35.065 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web)'
+2023-02-08 15:20:35.067 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/ - - - 200 - text/html;+charset=utf-8 12.1329ms
+2023-02-08 15:20:35.103 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2023-02-08 15:20:35.103 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2023-02-08 15:20:35.105 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/PatientManagerService.Web.styles.css?v=B-M4_Me8chgcXp-2dtuzM_UhmPuOP8cnpqqrivsjQvM - -
+2023-02-08 15:20:35.105 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 1.8978ms
+2023-02-08 15:20:35.106 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/lib/bootstrap/dist/css/bootstrap.min.css - -
+2023-02-08 15:20:35.109 -05:00 [INF] Sending file. Request path: '/PatientManagerService.Web.styles.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\obj\Debug\net7.0\scopedcss\bundle\PatientManagerService.Web.styles.css'
+2023-02-08 15:20:35.109 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/PatientManagerService.Web.styles.css?v=B-M4_Me8chgcXp-2dtuzM_UhmPuOP8cnpqqrivsjQvM - - - 200 1142 text/css 3.6763ms
+2023-02-08 15:20:35.109 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - -
+2023-02-08 15:20:35.109 -05:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2023-02-08 15:20:35.110 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/lib/bootstrap/dist/css/bootstrap.min.css - - - 0 162726 text/css 3.7563ms
+2023-02-08 15:20:35.110 -05:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\css\site.css'
+2023-02-08 15:20:35.110 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - - - 0 194 text/css 0.8098ms
+2023-02-08 15:20:35.148 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 44.8873ms
+2023-02-08 15:20:35.459 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/favicon.ico - -
+2023-02-08 15:20:35.460 -05:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\favicon.ico'
+2023-02-08 15:20:35.460 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/favicon.ico - - - 200 5430 image/x-icon 1.0021ms
+2023-02-08 15:20:46.654 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/index.html - -
+2023-02-08 15:20:46.664 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/index.html - - - 200 - text/html;charset=utf-8 10.2074ms
+2023-02-08 15:20:46.695 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2023-02-08 15:20:46.697 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2023-02-08 15:20:46.697 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui.css - -
+2023-02-08 15:20:46.699 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 1.7218ms
+2023-02-08 15:20:46.700 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-02-08 15:20:46.700 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui.css - - - 0 143943 text/css 2.7953ms
+2023-02-08 15:20:46.747 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 51.8179ms
+2023-02-08 15:20:46.831 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/favicon-16x16.png - -
+2023-02-08 15:20:46.832 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2023-02-08 15:20:46.832 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/favicon-16x16.png - - - 200 665 image/png 0.9545ms
+2023-02-08 15:20:46.915 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - -
+2023-02-08 15:20:46.918 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 2.9821ms
+2023-02-08 15:21:37.809 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/ - -
+2023-02-08 15:21:37.810 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web)'
+2023-02-08 15:21:37.811 -05:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller PatientManagerService.Web.Controllers.HomeController (PatientManagerService.Web).
+2023-02-08 15:21:37.811 -05:00 [INF] Executing ViewResult, running view Index.
+2023-02-08 15:21:37.819 -05:00 [INF] Executed ViewResult - view Index executed in 8.2831ms.
+2023-02-08 15:21:37.819 -05:00 [INF] Executed action PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web) in 8.5367ms
+2023-02-08 15:21:37.819 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web)'
+2023-02-08 15:21:37.821 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/ - - - 200 - text/html;+charset=utf-8 11.9344ms
+2023-02-08 15:21:37.896 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2023-02-08 15:21:37.898 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - -
+2023-02-08 15:21:37.898 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 1.9861ms
+2023-02-08 15:21:37.900 -05:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\css\site.css'
+2023-02-08 15:21:37.900 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2023-02-08 15:21:37.900 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - - - 0 194 text/css 2.4548ms
+2023-02-08 15:21:37.900 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2023-02-08 15:21:37.901 -05:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\js\site.js'
+2023-02-08 15:21:37.902 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 text/javascript 2.1311ms
+2023-02-08 15:21:37.904 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/PatientManagerService.Web.styles.css?v=B-M4_Me8chgcXp-2dtuzM_UhmPuOP8cnpqqrivsjQvM - -
+2023-02-08 15:21:37.906 -05:00 [INF] Sending file. Request path: '/PatientManagerService.Web.styles.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\obj\Debug\net7.0\scopedcss\bundle\PatientManagerService.Web.styles.css'
+2023-02-08 15:21:37.906 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/PatientManagerService.Web.styles.css?v=B-M4_Me8chgcXp-2dtuzM_UhmPuOP8cnpqqrivsjQvM - - - 0 1142 text/css 2.1129ms
+2023-02-08 15:21:37.935 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/lib/bootstrap/dist/css/bootstrap.min.css - -
+2023-02-08 15:21:37.938 -05:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2023-02-08 15:21:37.938 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 162726 text/css 3.4720ms
+2023-02-08 15:21:37.957 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 56.7863ms
+2023-02-08 15:21:37.983 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/favicon.ico - -
+2023-02-08 15:21:37.984 -05:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\favicon.ico'
+2023-02-08 15:21:37.985 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/favicon.ico - - - 200 5430 image/x-icon 1.5145ms
+2023-02-08 15:22:05.309 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/ - -
+2023-02-08 15:22:05.310 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web)'
+2023-02-08 15:22:05.310 -05:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller PatientManagerService.Web.Controllers.HomeController (PatientManagerService.Web).
+2023-02-08 15:22:05.310 -05:00 [INF] Executing ViewResult, running view Index.
+2023-02-08 15:22:05.317 -05:00 [INF] Executed ViewResult - view Index executed in 7.2906ms.
+2023-02-08 15:22:05.317 -05:00 [INF] Executed action PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web) in 7.487ms
+2023-02-08 15:22:05.317 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web)'
+2023-02-08 15:22:05.319 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/ - - - 200 - text/html;+charset=utf-8 10.2997ms
+2023-02-08 15:22:05.397 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/lib/bootstrap/dist/css/bootstrap.min.css - -
+2023-02-08 15:22:05.400 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - -
+2023-02-08 15:22:05.400 -05:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2023-02-08 15:22:05.402 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 162726 text/css 4.5359ms
+2023-02-08 15:22:05.403 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/PatientManagerService.Web.styles.css?v=B-M4_Me8chgcXp-2dtuzM_UhmPuOP8cnpqqrivsjQvM - -
+2023-02-08 15:22:05.403 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2023-02-08 15:22:05.403 -05:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\css\site.css'
+2023-02-08 15:22:05.404 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - - - 0 194 text/css 3.9016ms
+2023-02-08 15:22:05.404 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2023-02-08 15:22:05.405 -05:00 [INF] Sending file. Request path: '/PatientManagerService.Web.styles.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\obj\Debug\net7.0\scopedcss\bundle\PatientManagerService.Web.styles.css'
+2023-02-08 15:22:05.405 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/PatientManagerService.Web.styles.css?v=B-M4_Me8chgcXp-2dtuzM_UhmPuOP8cnpqqrivsjQvM - - - 0 1142 text/css 1.5963ms
+2023-02-08 15:22:05.405 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2023-02-08 15:22:05.405 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 1.0277ms
+2023-02-08 15:22:05.408 -05:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\js\site.js'
+2023-02-08 15:22:05.409 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 text/javascript 4.8241ms
+2023-02-08 15:22:05.460 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 54.9553ms
+2023-02-08 15:22:05.477 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/favicon.ico - -
+2023-02-08 15:22:05.478 -05:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\favicon.ico'
+2023-02-08 15:22:05.478 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/favicon.ico - - - 200 5430 image/x-icon 1.0265ms
+2023-02-08 15:22:07.815 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/index.html - -
+2023-02-08 15:22:07.821 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/index.html - - - 200 - text/html;charset=utf-8 6.4108ms
+2023-02-08 15:22:07.879 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2023-02-08 15:22:07.880 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2023-02-08 15:22:07.882 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 1.6035ms
+2023-02-08 15:22:07.884 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui.css - -
+2023-02-08 15:22:07.885 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-02-08 15:22:07.886 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui.css - - - 200 143943 text/css 1.8111ms
+2023-02-08 15:22:07.937 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 57.9454ms
+2023-02-08 15:22:08.022 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/favicon-16x16.png - -
+2023-02-08 15:22:08.024 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2023-02-08 15:22:08.025 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/favicon-16x16.png - - - 0 665 image/png 2.6719ms
+2023-02-08 15:22:08.145 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - -
+2023-02-08 15:22:08.150 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 4.6943ms
+2023-02-08 15:22:19.981 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2023-02-08 15:22:19.982 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 1.3507ms
+2023-02-08 15:22:20.213 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - -
+2023-02-08 15:22:20.216 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 3.0216ms
+2023-02-08 15:22:22.852 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/ - -
+2023-02-08 15:22:22.853 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web)'
+2023-02-08 15:22:22.853 -05:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller PatientManagerService.Web.Controllers.HomeController (PatientManagerService.Web).
+2023-02-08 15:22:22.854 -05:00 [INF] Executing ViewResult, running view Index.
+2023-02-08 15:22:22.867 -05:00 [INF] Executed ViewResult - view Index executed in 13.625ms.
+2023-02-08 15:22:22.867 -05:00 [INF] Executed action PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web) in 13.8992ms
+2023-02-08 15:22:22.868 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web)'
+2023-02-08 15:22:22.869 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/ - - - 200 - text/html;+charset=utf-8 16.9648ms
+2023-02-08 15:22:22.916 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/PatientManagerService.Web.styles.css?v=B-M4_Me8chgcXp-2dtuzM_UhmPuOP8cnpqqrivsjQvM - -
+2023-02-08 15:22:22.918 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2023-02-08 15:22:22.918 -05:00 [INF] Sending file. Request path: '/PatientManagerService.Web.styles.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\obj\Debug\net7.0\scopedcss\bundle\PatientManagerService.Web.styles.css'
+2023-02-08 15:22:22.918 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/PatientManagerService.Web.styles.css?v=B-M4_Me8chgcXp-2dtuzM_UhmPuOP8cnpqqrivsjQvM - - - 200 1142 text/css 1.7882ms
+2023-02-08 15:22:22.919 -05:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\js\site.js'
+2023-02-08 15:22:22.919 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 text/javascript 1.4603ms
+2023-02-08 15:22:22.928 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2023-02-08 15:22:22.930 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 3.2487ms
+2023-02-08 15:22:22.973 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/favicon.ico - -
+2023-02-08 15:22:22.974 -05:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\favicon.ico'
+2023-02-08 15:22:22.974 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/favicon.ico - - - 200 5430 image/x-icon 1.1246ms
+2023-02-08 15:22:25.155 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2023-02-08 15:22:25.158 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 3.0373ms
+2023-02-08 15:22:27.615 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2023-02-08 15:22:27.617 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 1.1922ms
+2023-02-08 15:22:27.833 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - -
+2023-02-08 15:22:27.836 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 3.2572ms
+2023-02-08 15:22:30.091 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/api/patients - -
+2023-02-08 15:22:30.091 -05:00 [INF] CORS policy execution successful.
+2023-02-08 15:22:30.092 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web)'
+2023-02-08 15:22:30.092 -05:00 [INF] Route matched with {action = "List", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List() on controller PatientManagerService.Web.Api.PatientsController (PatientManagerService.Web).
+2023-02-08 15:22:30.105 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Birthday], [p].[FirstName], [p].[Gender], [p].[LastName]
+FROM [Patients] AS [p]
+2023-02-08 15:22:30.106 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientManagerService.Web.ApiModels.PatientDTO, PatientManagerService.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-02-08 15:22:30.106 -05:00 [INF] Executed action PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web) in 13.0654ms
+2023-02-08 15:22:30.106 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web)'
+2023-02-08 15:22:30.106 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/api/patients - - - 200 512 application/json;+charset=utf-8 14.9778ms
+2023-02-08 15:31:13.249 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/index.html - -
+2023-02-08 15:31:13.258 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/index.html - - - 200 - text/html;charset=utf-8 9.2527ms
+2023-02-08 15:31:13.318 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui.css - -
+2023-02-08 15:31:13.321 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-02-08 15:31:13.321 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui.css - - - 0 143943 text/css 3.0129ms
+2023-02-08 15:31:13.323 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2023-02-08 15:31:13.326 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 3.1234ms
+2023-02-08 15:31:13.329 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2023-02-08 15:31:13.378 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 49.6181ms
+2023-02-08 15:31:13.523 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/favicon-16x16.png - -
+2023-02-08 15:31:13.524 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2023-02-08 15:31:13.524 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/favicon-16x16.png - - - 200 665 image/png 1.0717ms
+2023-02-08 15:31:13.560 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - -
+2023-02-08 15:31:13.563 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 2.9940ms
+2023-02-08 15:31:15.817 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/ - -
+2023-02-08 15:31:15.819 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web)'
+2023-02-08 15:31:15.819 -05:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller PatientManagerService.Web.Controllers.HomeController (PatientManagerService.Web).
+2023-02-08 15:31:15.819 -05:00 [INF] Executing ViewResult, running view Index.
+2023-02-08 15:31:15.827 -05:00 [INF] Executed ViewResult - view Index executed in 7.7095ms.
+2023-02-08 15:31:15.827 -05:00 [INF] Executed action PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web) in 8.0051ms
+2023-02-08 15:31:15.827 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web)'
+2023-02-08 15:31:15.829 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/ - - - 200 - text/html;+charset=utf-8 11.7556ms
+2023-02-08 15:31:15.888 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2023-02-08 15:31:15.889 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2023-02-08 15:31:15.892 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 2.3699ms
+2023-02-08 15:31:15.894 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - -
+2023-02-08 15:31:15.897 -05:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\css\site.css'
+2023-02-08 15:31:15.897 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - - - 0 194 text/css 3.5235ms
+2023-02-08 15:31:15.897 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2023-02-08 15:31:15.898 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/lib/bootstrap/dist/css/bootstrap.min.css - -
+2023-02-08 15:31:15.900 -05:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2023-02-08 15:31:15.900 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/lib/bootstrap/dist/css/bootstrap.min.css - - - 0 162726 text/css 2.5830ms
+2023-02-08 15:31:15.901 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/PatientManagerService.Web.styles.css?v=B-M4_Me8chgcXp-2dtuzM_UhmPuOP8cnpqqrivsjQvM - -
+2023-02-08 15:31:15.902 -05:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\js\site.js'
+2023-02-08 15:31:15.902 -05:00 [INF] Sending file. Request path: '/PatientManagerService.Web.styles.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\obj\Debug\net7.0\scopedcss\bundle\PatientManagerService.Web.styles.css'
+2023-02-08 15:31:15.902 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 text/javascript 4.5178ms
+2023-02-08 15:31:15.902 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/PatientManagerService.Web.styles.css?v=B-M4_Me8chgcXp-2dtuzM_UhmPuOP8cnpqqrivsjQvM - - - 200 1142 text/css 1.3567ms
+2023-02-08 15:31:15.948 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 59.5819ms
+2023-02-08 15:31:15.968 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/favicon.ico - -
+2023-02-08 15:31:15.969 -05:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\favicon.ico'
+2023-02-08 15:31:15.969 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/favicon.ico - - - 200 5430 image/x-icon 0.8899ms
+2023-02-08 15:31:19.147 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/ - -
+2023-02-08 15:31:19.148 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web)'
+2023-02-08 15:31:19.148 -05:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller PatientManagerService.Web.Controllers.HomeController (PatientManagerService.Web).
+2023-02-08 15:31:19.149 -05:00 [INF] Executing ViewResult, running view Index.
+2023-02-08 15:31:19.156 -05:00 [INF] Executed ViewResult - view Index executed in 7.2317ms.
+2023-02-08 15:31:19.156 -05:00 [INF] Executed action PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web) in 7.5234ms
+2023-02-08 15:31:19.156 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web)'
+2023-02-08 15:31:19.158 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/ - - - 200 - text/html;+charset=utf-8 10.9777ms
+2023-02-08 15:31:19.228 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2023-02-08 15:31:19.234 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2023-02-08 15:31:19.237 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 2.6281ms
+2023-02-08 15:31:19.282 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 54.2692ms
+2023-02-08 15:31:26.943 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/ - -
+2023-02-08 15:31:26.944 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web)'
+2023-02-08 15:31:26.944 -05:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller PatientManagerService.Web.Controllers.HomeController (PatientManagerService.Web).
+2023-02-08 15:31:26.945 -05:00 [INF] Executing ViewResult, running view Index.
+2023-02-08 15:31:26.951 -05:00 [INF] Executed ViewResult - view Index executed in 6.4758ms.
+2023-02-08 15:31:26.951 -05:00 [INF] Executed action PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web) in 6.7509ms
+2023-02-08 15:31:26.951 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web)'
+2023-02-08 15:31:26.952 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/ - - - 200 - text/html;+charset=utf-8 9.3383ms
+2023-02-08 15:31:27.019 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2023-02-08 15:31:27.020 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2023-02-08 15:31:27.022 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 2.0119ms
+2023-02-08 15:31:27.070 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 51.2388ms
+2023-02-08 15:31:27.094 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/favicon.ico - -
+2023-02-08 15:31:27.095 -05:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\favicon.ico'
+2023-02-08 15:31:27.095 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/favicon.ico - - - 200 5430 image/x-icon 1.2483ms
+2023-02-08 15:31:29.236 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/index.html - -
+2023-02-08 15:31:29.243 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/index.html - - - 200 - text/html;charset=utf-8 7.0593ms
+2023-02-08 15:31:29.289 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui.css - -
+2023-02-08 15:31:29.289 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-02-08 15:31:29.289 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/swagger-ui.css - - - 0 143943 text/css 0.8508ms
+2023-02-08 15:31:29.303 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2023-02-08 15:31:29.306 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2023-02-08 15:31:29.311 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 4.8890ms
+2023-02-08 15:31:29.356 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 53.2935ms
+2023-02-08 15:31:29.445 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/favicon-16x16.png - -
+2023-02-08 15:31:29.447 -05:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2023-02-08 15:31:29.447 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/favicon-16x16.png - - - 200 665 image/png 1.9391ms
+2023-02-08 15:31:29.530 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - -
+2023-02-08 15:31:29.532 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 2.1899ms
+2023-02-08 16:40:11.429 -05:00 [INF] User profile is available. Using 'C:\Users\cgray\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-02-08 16:40:12.445 -05:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-02-08 16:40:12.483 -05:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-02-08 16:40:12.651 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Patients] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-02-08 16:40:12.732 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-02-08 16:40:12.732 -05:00 [INF] Hosting environment: Development
+2023-02-08 16:40:12.732 -05:00 [INF] Content root path: C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web
+2023-02-08 16:40:12.755 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/ - -
+2023-02-08 16:40:12.816 -05:00 [WRN] Failed to determine the https port for redirect.
+2023-02-08 16:40:12.833 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web)'
+2023-02-08 16:40:12.838 -05:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller PatientManagerService.Web.Controllers.HomeController (PatientManagerService.Web).
+2023-02-08 16:40:12.844 -05:00 [INF] Executing ViewResult, running view Index.
+2023-02-08 16:40:12.983 -05:00 [INF] Executed ViewResult - view Index executed in 139.5051ms.
+2023-02-08 16:40:12.986 -05:00 [INF] Executed action PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web) in 147.8642ms
+2023-02-08 16:40:12.987 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web)'
+2023-02-08 16:40:13.026 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/ - - - 200 - text/html;+charset=utf-8 272.2484ms
+2023-02-08 16:40:13.048 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/PatientManagerService.Web.styles.css?v=B-M4_Me8chgcXp-2dtuzM_UhmPuOP8cnpqqrivsjQvM - -
+2023-02-08 16:40:13.048 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/lib/bootstrap/dist/css/bootstrap.min.css - -
+2023-02-08 16:40:13.048 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - -
+2023-02-08 16:40:13.048 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2023-02-08 16:40:13.061 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/lib/jquery/dist/jquery.min.js - -
+2023-02-08 16:40:13.065 -05:00 [INF] The file /lib/jquery/dist/jquery.min.js was not modified
+2023-02-08 16:40:13.065 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2023-02-08 16:40:13.066 -05:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js was not modified
+2023-02-08 16:40:13.067 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 304 - text/javascript 1.7072ms
+2023-02-08 16:40:13.067 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/lib/jquery/dist/jquery.min.js - - - 304 - text/javascript 6.5864ms
+2023-02-08 16:40:13.068 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2023-02-08 16:40:13.069 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_vs/browserLink - -
+2023-02-08 16:40:13.072 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 4.3703ms
+2023-02-08 16:40:13.078 -05:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\js\site.js'
+2023-02-08 16:40:13.078 -05:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\css\site.css'
+2023-02-08 16:40:13.078 -05:00 [INF] Sending file. Request path: '/PatientManagerService.Web.styles.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\obj\Debug\net7.0\scopedcss\bundle\PatientManagerService.Web.styles.css'
+2023-02-08 16:40:13.079 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 0 230 text/javascript 30.1025ms
+2023-02-08 16:40:13.079 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - - - 200 194 text/css 31.0819ms
+2023-02-08 16:40:13.079 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/PatientManagerService.Web.styles.css?v=B-M4_Me8chgcXp-2dtuzM_UhmPuOP8cnpqqrivsjQvM - - - 200 1142 text/css 31.4165ms
+2023-02-08 16:40:13.091 -05:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2023-02-08 16:40:13.098 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 162726 text/css 50.4968ms
+2023-02-08 16:40:13.139 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 70.2611ms
+2023-02-08 16:40:13.348 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/favicon.ico - -
+2023-02-08 16:40:13.351 -05:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\favicon.ico'
+2023-02-08 16:40:13.351 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/favicon.ico - - - 200 5430 image/x-icon 3.2916ms
+2023-02-08 16:40:47.346 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/ - -
+2023-02-08 16:40:47.349 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web)'
+2023-02-08 16:40:47.350 -05:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller PatientManagerService.Web.Controllers.HomeController (PatientManagerService.Web).
+2023-02-08 16:40:47.351 -05:00 [INF] Executing ViewResult, running view Index.
+2023-02-08 16:40:47.367 -05:00 [INF] Executed ViewResult - view Index executed in 16.2485ms.
+2023-02-08 16:40:47.369 -05:00 [INF] Executed action PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web) in 19.2979ms
+2023-02-08 16:40:47.369 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Controllers.HomeController.Index (PatientManagerService.Web)'
+2023-02-08 16:40:47.374 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/ - - - 200 - text/html;+charset=utf-8 27.1638ms
+2023-02-08 16:40:47.414 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/lib/bootstrap/dist/css/bootstrap.min.css - -
+2023-02-08 16:40:47.414 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/PatientManagerService.Web.styles.css?v=B-M4_Me8chgcXp-2dtuzM_UhmPuOP8cnpqqrivsjQvM - -
+2023-02-08 16:40:47.415 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - -
+2023-02-08 16:40:47.418 -05:00 [INF] Sending file. Request path: '/PatientManagerService.Web.styles.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\obj\Debug\net7.0\scopedcss\bundle\PatientManagerService.Web.styles.css'
+2023-02-08 16:40:47.418 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/PatientManagerService.Web.styles.css?v=B-M4_Me8chgcXp-2dtuzM_UhmPuOP8cnpqqrivsjQvM - - - 200 1142 text/css 4.0516ms
+2023-02-08 16:40:47.421 -05:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\css\site.css'
+2023-02-08 16:40:47.422 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/css/site.css?v=AKvNjO3dCPPS0eSU1Ez8T2wI280i08yGycV9ndytL-c - - - 200 194 text/css 7.0982ms
+2023-02-08 16:40:47.426 -05:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2023-02-08 16:40:47.427 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 162726 text/css 13.0918ms
+2023-02-08 16:40:47.430 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - -
+2023-02-08 16:40:47.432 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/_framework/aspnetcore-browser-refresh.js - - - 200 12020 application/javascript;+charset=utf-8 1.4304ms
+2023-02-08 16:40:47.500 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/favicon.ico - -
+2023-02-08 16:40:47.504 -05:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\all\projects\Angular-Rethink-Sandbox\PatientManagerFinal\PatientManagerService\src\PatientManagerService.Web\wwwroot\favicon.ico'
+2023-02-08 16:40:47.504 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/favicon.ico - - - 200 5430 image/x-icon 4.0743ms
+2023-02-08 16:46:46.392 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/api/patients - -
+2023-02-08 16:46:46.394 -05:00 [INF] CORS policy execution successful.
+2023-02-08 16:46:46.394 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web)'
+2023-02-08 16:46:46.403 -05:00 [INF] Route matched with {action = "List", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List() on controller PatientManagerService.Web.Api.PatientsController (PatientManagerService.Web).
+2023-02-08 16:46:46.646 -05:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Birthday], [p].[FirstName], [p].[Gender], [p].[LastName]
+FROM [Patients] AS [p]
+2023-02-08 16:46:46.711 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientManagerService.Web.ApiModels.PatientDTO, PatientManagerService.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-02-08 16:46:46.775 -05:00 [INF] Executed action PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web) in 372.0676ms
+2023-02-08 16:46:46.775 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web)'
+2023-02-08 16:46:46.780 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/api/patients - - - 200 512 application/json;+charset=utf-8 387.7655ms
+2023-02-08 16:46:53.268 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/api/patients/15 - -
+2023-02-08 16:46:53.268 -05:00 [INF] CORS policy execution successful.
+2023-02-08 16:46:53.269 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Api.PatientsController.GetById (PatientManagerService.Web)'
+2023-02-08 16:46:53.285 -05:00 [INF] Route matched with {action = "GetById", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller PatientManagerService.Web.Api.PatientsController (PatientManagerService.Web).
+2023-02-08 16:46:53.395 -05:00 [INF] Executed DbCommand (22ms) [Parameters=[@__patientId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Birthday], [p].[FirstName], [p].[Gender], [p].[LastName]
+FROM [Patients] AS [p]
+WHERE [p].[Id] = @__patientId_0
+2023-02-08 16:46:53.402 -05:00 [INF] Executing OkObjectResult, writing value of type 'PatientManagerService.Web.ApiModels.PatientDTO'.
+2023-02-08 16:46:53.404 -05:00 [INF] Executed action PatientManagerService.Web.Api.PatientsController.GetById (PatientManagerService.Web) in 118.7642ms
+2023-02-08 16:46:53.404 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Api.PatientsController.GetById (PatientManagerService.Web)'
+2023-02-08 16:46:53.405 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/api/patients/15 - - - 200 83 application/json;+charset=utf-8 137.5423ms
+2023-02-08 16:46:59.226 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/api/patients - -
+2023-02-08 16:46:59.226 -05:00 [INF] CORS policy execution successful.
+2023-02-08 16:46:59.227 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web)'
+2023-02-08 16:46:59.227 -05:00 [INF] Route matched with {action = "List", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List() on controller PatientManagerService.Web.Api.PatientsController (PatientManagerService.Web).
+2023-02-08 16:46:59.231 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Birthday], [p].[FirstName], [p].[Gender], [p].[LastName]
+FROM [Patients] AS [p]
+2023-02-08 16:46:59.231 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientManagerService.Web.ApiModels.PatientDTO, PatientManagerService.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-02-08 16:46:59.232 -05:00 [INF] Executed action PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web) in 4.5948ms
+2023-02-08 16:46:59.232 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web)'
+2023-02-08 16:46:59.232 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/api/patients - - - 200 512 application/json;+charset=utf-8 6.5350ms
+2023-02-08 16:47:16.824 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/api/patients/15 - -
+2023-02-08 16:47:16.824 -05:00 [INF] CORS policy execution successful.
+2023-02-08 16:47:16.824 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Api.PatientsController.GetById (PatientManagerService.Web)'
+2023-02-08 16:47:16.824 -05:00 [INF] Route matched with {action = "GetById", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32) on controller PatientManagerService.Web.Api.PatientsController (PatientManagerService.Web).
+2023-02-08 16:47:16.833 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__patientId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Birthday], [p].[FirstName], [p].[Gender], [p].[LastName]
+FROM [Patients] AS [p]
+WHERE [p].[Id] = @__patientId_0
+2023-02-08 16:47:16.834 -05:00 [INF] Executing OkObjectResult, writing value of type 'PatientManagerService.Web.ApiModels.PatientDTO'.
+2023-02-08 16:47:16.834 -05:00 [INF] Executed action PatientManagerService.Web.Api.PatientsController.GetById (PatientManagerService.Web) in 9.7848ms
+2023-02-08 16:47:16.835 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Api.PatientsController.GetById (PatientManagerService.Web)'
+2023-02-08 16:47:16.835 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/api/patients/15 - - - 200 83 application/json;+charset=utf-8 11.1732ms
+2023-02-08 16:47:43.855 -05:00 [INF] Request starting HTTP/1.1 PUT http://localhost:57678/api/patients/15 application/json 82
+2023-02-08 16:47:43.856 -05:00 [INF] CORS policy execution successful.
+2023-02-08 16:47:43.856 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Api.PatientsController.UpdatePatient (PatientManagerService.Web)'
+2023-02-08 16:47:43.860 -05:00 [INF] Route matched with {action = "Patient", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdatePatient(Int32, PatientManagerService.Web.ApiModels.PatientDTO) on controller PatientManagerService.Web.Api.PatientsController (PatientManagerService.Web).
+2023-02-08 16:47:43.900 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__patientId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Birthday], [p].[FirstName], [p].[Gender], [p].[LastName]
+FROM [Patients] AS [p]
+WHERE [p].[Id] = @__patientId_0
+2023-02-08 16:47:43.973 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (Size = 30), @p1='?' (Size = 35), @p2='?' (Size = 10), @p3='?' (Size = 35)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Patients] SET [Birthday] = @p0, [FirstName] = @p1, [Gender] = @p2, [LastName] = @p3
+OUTPUT 1
+WHERE [Id] = @p4;
+2023-02-08 16:47:43.990 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-02-08 16:47:43.991 -05:00 [INF] Executed action PatientManagerService.Web.Api.PatientsController.UpdatePatient (PatientManagerService.Web) in 130.6785ms
+2023-02-08 16:47:43.991 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Api.PatientsController.UpdatePatient (PatientManagerService.Web)'
+2023-02-08 16:47:43.991 -05:00 [INF] Request finished HTTP/1.1 PUT http://localhost:57678/api/patients/15 application/json 82 - 200 - text/plain;+charset=utf-8 135.9028ms
+2023-02-08 16:47:44.002 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/api/patients - -
+2023-02-08 16:47:44.002 -05:00 [INF] CORS policy execution successful.
+2023-02-08 16:47:44.002 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web)'
+2023-02-08 16:47:44.002 -05:00 [INF] Route matched with {action = "List", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List() on controller PatientManagerService.Web.Api.PatientsController (PatientManagerService.Web).
+2023-02-08 16:47:44.005 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Birthday], [p].[FirstName], [p].[Gender], [p].[LastName]
+FROM [Patients] AS [p]
+2023-02-08 16:47:44.006 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientManagerService.Web.ApiModels.PatientDTO, PatientManagerService.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-02-08 16:47:44.006 -05:00 [INF] Executed action PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web) in 3.6514ms
+2023-02-08 16:47:44.006 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web)'
+2023-02-08 16:47:44.007 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/api/patients - - - 200 511 application/json;+charset=utf-8 4.9522ms
+2023-02-08 16:47:48.887 -05:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:57678/api/patients/15 - -
+2023-02-08 16:47:48.887 -05:00 [INF] CORS policy execution successful.
+2023-02-08 16:47:48.888 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Api.PatientsController.DeletePatient (PatientManagerService.Web)'
+2023-02-08 16:47:48.893 -05:00 [INF] Route matched with {action = "Patient", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeletePatient(Int32) on controller PatientManagerService.Web.Api.PatientsController (PatientManagerService.Web).
+2023-02-08 16:47:48.897 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__patientId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Birthday], [p].[FirstName], [p].[Gender], [p].[LastName]
+FROM [Patients] AS [p]
+WHERE [p].[Id] = @__patientId_0
+2023-02-08 16:47:48.927 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Patients]
+OUTPUT 1
+WHERE [Id] = @p0;
+2023-02-08 16:47:48.934 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-02-08 16:47:48.934 -05:00 [INF] Executed action PatientManagerService.Web.Api.PatientsController.DeletePatient (PatientManagerService.Web) in 41.6271ms
+2023-02-08 16:47:48.934 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Api.PatientsController.DeletePatient (PatientManagerService.Web)'
+2023-02-08 16:47:48.935 -05:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:57678/api/patients/15 - - - 200 - text/plain;+charset=utf-8 47.6004ms
+2023-02-08 16:47:48.999 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/api/patients - -
+2023-02-08 16:47:49.000 -05:00 [INF] CORS policy execution successful.
+2023-02-08 16:47:49.001 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web)'
+2023-02-08 16:47:49.001 -05:00 [INF] Route matched with {action = "List", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List() on controller PatientManagerService.Web.Api.PatientsController (PatientManagerService.Web).
+2023-02-08 16:47:49.004 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Birthday], [p].[FirstName], [p].[Gender], [p].[LastName]
+FROM [Patients] AS [p]
+2023-02-08 16:47:49.005 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientManagerService.Web.ApiModels.PatientDTO, PatientManagerService.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-02-08 16:47:49.006 -05:00 [INF] Executed action PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web) in 3.9786ms
+2023-02-08 16:47:49.006 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web)'
+2023-02-08 16:47:49.006 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/api/patients - - - 200 428 application/json;+charset=utf-8 7.4035ms
+2023-02-08 16:47:54.188 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:57678/api/patients multipart/form-data;+boundary=---------------------------3667600779509392397320187381 331
+2023-02-08 16:47:54.189 -05:00 [INF] CORS policy execution successful.
+2023-02-08 16:47:54.189 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Api.PatientsController.UploadPatients (PatientManagerService.Web)'
+2023-02-08 16:47:54.194 -05:00 [INF] Route matched with {action = "patients", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UploadPatients(Microsoft.AspNetCore.Http.IFormFile, System.Threading.CancellationToken) on controller PatientManagerService.Web.Api.PatientsController (PatientManagerService.Web).
+2023-02-08 16:47:54.279 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__patient_FirstName_0='?' (Size = 35), @__patient_LastName_1='?' (Size = 35), @__patient_Birthday_2='?' (Size = 30), @__patient_Gender_3='?' (Size = 10)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Patients] AS [p]
+        WHERE [p].[FirstName] = @__patient_FirstName_0 AND [p].[LastName] = @__patient_LastName_1 AND [p].[Birthday] = @__patient_Birthday_2 AND [p].[Gender] = @__patient_Gender_3) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-02-08 16:47:54.287 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__patient_FirstName_0='?' (Size = 35), @__patient_LastName_1='?' (Size = 35), @__patient_Birthday_2='?' (Size = 30), @__patient_Gender_3='?' (Size = 10)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Patients] AS [p]
+        WHERE [p].[FirstName] = @__patient_FirstName_0 AND [p].[LastName] = @__patient_LastName_1 AND [p].[Birthday] = @__patient_Birthday_2 AND [p].[Gender] = @__patient_Gender_3) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-02-08 16:47:54.318 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 30), @p1='?' (Size = 35), @p2='?' (Size = 10), @p3='?' (Size = 35), @p4='?' (Size = 30), @p5='?' (Size = 35), @p6='?' (Size = 10), @p7='?' (Size = 35)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [Patients] USING (
+VALUES (@p0, @p1, @p2, @p3, 0),
+(@p4, @p5, @p6, @p7, 1)) AS i ([Birthday], [FirstName], [Gender], [LastName], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Birthday], [FirstName], [Gender], [LastName])
+VALUES (i.[Birthday], i.[FirstName], i.[Gender], i.[LastName])
+OUTPUT INSERTED.[Id], i._Position;
+2023-02-08 16:47:54.332 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2023-02-08 16:47:54.332 -05:00 [INF] Executed action PatientManagerService.Web.Api.PatientsController.UploadPatients (PatientManagerService.Web) in 138.549ms
+2023-02-08 16:47:54.333 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Api.PatientsController.UploadPatients (PatientManagerService.Web)'
+2023-02-08 16:47:54.333 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:57678/api/patients multipart/form-data;+boundary=---------------------------3667600779509392397320187381 331 - 200 1 application/json;+charset=utf-8 144.5144ms
+2023-02-08 16:47:56.894 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:57678/api/patients - -
+2023-02-08 16:47:56.894 -05:00 [INF] CORS policy execution successful.
+2023-02-08 16:47:56.894 -05:00 [INF] Executing endpoint 'PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web)'
+2023-02-08 16:47:56.895 -05:00 [INF] Route matched with {action = "List", controller = "Patients"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] List() on controller PatientManagerService.Web.Api.PatientsController (PatientManagerService.Web).
+2023-02-08 16:47:56.899 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Birthday], [p].[FirstName], [p].[Gender], [p].[LastName]
+FROM [Patients] AS [p]
+2023-02-08 16:47:56.900 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[PatientManagerService.Web.ApiModels.PatientDTO, PatientManagerService.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-02-08 16:47:56.901 -05:00 [INF] Executed action PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web) in 5.6465ms
+2023-02-08 16:47:56.901 -05:00 [INF] Executed endpoint 'PatientManagerService.Web.Api.PatientsController.List (PatientManagerService.Web)'
+2023-02-08 16:47:56.901 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:57678/api/patients - - - 200 597 application/json;+charset=utf-8 7.4605ms
