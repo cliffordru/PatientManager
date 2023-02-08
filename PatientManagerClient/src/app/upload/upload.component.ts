@@ -1,5 +1,6 @@
 import { HttpClient, HttpErrorResponse, HttpEventType } from '@angular/common/http';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-upload',
@@ -26,9 +27,7 @@ export class UploadComponent implements OnInit {
       return;
     }
 
-    //TODO: Move base url to config
-    //const apiurl = 'http://localhost:57678/api/Upload';
-    const apiurl = 'http://localhost:57678/api/patients';
+    const apiurl = `${environment.apiBaseUrl}/patients`;
 
     //TODO: Add client side validation & messaging
     let fileToUpload = <File>files[0];

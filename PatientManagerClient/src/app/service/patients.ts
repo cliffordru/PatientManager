@@ -1,16 +1,14 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, Subject, tap, throwError } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Patient } from '../model/patient';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-  //TODO: Move base url to config
-  //apiurl = 'https://localhost:5001/api/patients';
-  //apiurl = 'http://localhost:57678/patients';
-  apiurl = 'http://localhost:57678/api/patients';
+  apiurl = `${environment.apiBaseUrl}/patients`;
 
   private _refreshrequired = new Subject<void>();
   get RequiredRefresh() {
@@ -34,7 +32,7 @@ export class ApiService {
     //const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
 
     //const body = JSON.stringify(inputdata.firstName);
-    return this.http.put(this.apiurl + '/' + inputdata.id, inputdata).pipe(
+    return this.http.put(`${this.apiurl}/${inputdata.id}`, inputdata).pipe(
       tap(() => {
         this.RequiredRefresh.next();
       }), catchError(this.handleError)
