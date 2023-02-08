@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/alertifyjs//build/css/alertify.min.css';
+@import '../node_modules/alertifyjs//build/css/themes/bootstrap.min.css';
+@import '../node_modules/alertifyjs//build/css/themes/default.css';
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary { background-color: #00BADE; }
+.mat-flat-button.mat-warn, .mat-raised-button.mat-warn, .mat-fab.mat-warn, .mat-mini-fab.mat-warn { background-color: #386DBD; }
+
+/* TODO: proper style override */
+.btn-success {
+	--bs-btn-color: #fff;
+	--bs-btn-bg: #00BADE;
+	--bs-btn-border-color: #00BADE;
+	--bs-btn-hover-color: #fff;
+	--bs-btn-hover-bg: #00BADE;
+	--bs-btn-hover-border-color: #00BADE;
+	--bs-btn-focus-shadow-rgb: 60, 153, 110;
+	--bs-btn-active-color: #fff;
+	--bs-btn-active-bg: #00BADE;
+	--bs-btn-active-border-color: #00BADE;
+	--bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+	--bs-btn-disabled-color: #fff;
+	--bs-btn-disabled-bg: #00BADE;
+	--bs-btn-disabled-border-color: #00BADE;
+	background-color: #00BADE;
+}

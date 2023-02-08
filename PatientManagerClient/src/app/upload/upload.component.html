@@ -1,0 +1,19 @@
+<div class="row" style="margin-bottom:15px;">
+  <div class="col-md-10">
+    <input type="file" #file placeholder="Choose file" (change)="uploadFile(file.files)" style="display:none;">
+    Click the button below to select a .csv file with Patients to upload.  <a href="..\..\assets\SamplePatients.csv">Sample File</a>
+  </div>
+  <div><button type="button" class="btn btn-success" (click)="file.click()">Upload File</button> </div>
+  <div class="col-md-10">
+    <div class="upload" *ngIf="progress > 0">
+      {{progress}}%
+    </div>
+    <div class=" upload alert alert-success fade in alert-dismissible show" *ngIf="message">
+      {{message}}
+    </div>
+
+    <div *ngIf='errorMessage' class='alert alert-danger fade in alert-dismissible show'>
+      Error: {{ errorMessage }}
+    </div>
+  </div>
+</div>

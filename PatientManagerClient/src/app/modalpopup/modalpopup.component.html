@@ -1,0 +1,43 @@
+<h1 mat-dialog-title>Patient</h1>
+<form [formGroup]="Reactiveform" (ngSubmit)="SavePatient()">
+    <div mat-dialog-content>
+        <mat-form-field>
+            <mat-label>Id</mat-label>
+            <input placeholder="Id" matInput formControlName="id" readonly>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>First Name</mat-label>
+            <input placeholder="First Name" matInput formControlName="firstName">                    
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Last Name</mat-label>
+            <input placeholder="Last Name" matInput formControlName="lastName">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Birthday</mat-label>
+            <input placeholder="Birthday" matInput formControlName="birthday">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Gender</mat-label>
+            <input placeholder="Gender" matInput formControlName="gender">
+        </mat-form-field>
+        <!-- <mat-form-field>
+            <mat-label>Designation</mat-label>
+           <mat-select formControlName="designation">
+<mat-option *ngFor="let item of desdata" [value]="item.id">
+{{item.firstName}}
+</mat-option>
+           </mat-select>
+        </mat-form-field> -->
+        <!-- <mat-radio-group formControlName="gender" aria-label="Select an Gender">
+            <mat-radio-button value="M">Male</mat-radio-button>
+            <mat-radio-button value="F">Female</mat-radio-button>
+          </mat-radio-group> -->          
+ 
+    </div>
+    <div mat-dialog-actions>      
+      <button type="submit" mat-raised-button color="primary" cdkFocusInitial>Save</button>
+      <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+    </div>
+</form>
+
