@@ -40,7 +40,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddFastEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-  c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+  c.SwaggerDoc("v1", new OpenApiInfo { Title = "Patient Manager Service API", Version = "v1" });
   c.EnableAnnotations();
   c.OperationFilter<FastEndpointsOperationFilter>();
 });
