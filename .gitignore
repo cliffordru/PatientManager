@@ -351,3 +351,5 @@ MigrationBackup/
 
 /PatientManagerService/src/PatientManagerService.Web/log*
 /PatientManagerService/src/PatientManagerService.Web/Resources/Uploads/*
+
+/PatientManagerService/src/PatientManagerService.Web/log*
