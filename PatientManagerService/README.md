@@ -2,7 +2,8 @@
 
 ## Getting Started
 
-You can run the project and then browse to the [homepage](http://localhost:57678/) and you can view the [API swagger documentation](http://localhost:57678/swagger/index.html)
+You can run the project and then browse to the <a href="http://localhost:57678/" target="_blank">homepage</a>
+and you can view the <a href="http://localhost:57678/swagger/index.html" target="_blank">API swagger documentation</a> 
 
 This project will use IISExpress and SQLExpress. These can be changed, for example it will run with SqlServer (defualt) or SQLite. To toggle between them, change `options.UseSqlServer(connectionString));` to `options.UseSqlite(connectionString));` in the `PatientManagerService.Infrastructure.StartupSetup` file. Also remember to replace the `DefaultConnection` with `SqliteConnection` in the `Your.ProjectName.Web.Program` file, which points to your Database Server
 
