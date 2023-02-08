@@ -9,6 +9,8 @@ This project will use IISExpress and SQLExpress. These can be changed, for examp
 
 Log files are written to the Web project root directory.  Patient upload files are saved to Resources\Uploads
 
+Migrations can be run from the Infrastructure projects using `update-database`
+
 ## The Core Project
 
 The Core project is the center of the design, and all other project dependencies should point toward it. The Core project includes things like:
