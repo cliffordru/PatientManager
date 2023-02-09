@@ -21,6 +21,8 @@ The following are  instructions for installing the code.
 3) In a command window (or the Command prompt in VS Code), type `npm install`.
 
    This creates a node_modules folder and installs all packages from the package.json file into that folder. You may see a few warnings during this process, but you should not see any errors.
+
+   ** Before proceeding, you should ensure the PatientManagerService is running.  Please refer to the [PatientManagerService\README.md](../PatientManagerService/README.md) file in the PatientManagerService folder for instructions. 
    
 4) In the same command window (or the Command property in VS Code), type `npm start` or `ng serve -o`.
 
