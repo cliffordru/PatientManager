@@ -7,11 +7,11 @@ public class EfRepositoryAddPatient : BaseEfRepoTestFixture
 {
   private string _testFirstName = Guid.NewGuid().ToString();
   private string _testLasttName = "G";
-  private string _testBirthdate = "8/8/1988";
+  private string _testBirthday = "8/8/1988";
   private string _testGender = "M";
   private Patient? _testPatient;
 
-  private Patient CreatePatient() => new(_testFirstName, _testLasttName, _testBirthdate, _testGender);
+  private Patient CreatePatient() => new(_testFirstName, _testLasttName, _testBirthday, _testGender);
 
   [Fact]
   public async Task AddsPatientAndSetsId()

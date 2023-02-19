@@ -7,13 +7,13 @@ public class PatientConstructor
 {
   private string _testFirstName = "Cliff";
   private string _testLasttName = "G";
-  private string _testBirthdate = "8/8/1988";
+  private string _testBirthday = "8/8/1988";
   private string _testGender = "M";
   private Patient? _testPatient;
 
   private Patient CreatePatient()
   {
-    return new Patient(_testFirstName, _testLasttName, _testBirthdate, _testGender);
+    return new Patient(_testFirstName, _testLasttName, _testBirthday, _testGender);
   }
 
   [Fact]
@@ -37,7 +37,7 @@ public class PatientConstructor
   {
     _testPatient = CreatePatient();
 
-    Assert.Equal(_testBirthdate, _testPatient.Birthday);
+    Assert.Equal(_testBirthday, _testPatient.Birthday);
   }
 
   [Fact]
