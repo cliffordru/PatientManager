@@ -1,0 +1,10 @@
+@hostname = localhost
+@port = 57678
+@host = {{hostname}}:{{port}}
+
+GET http://{{host}}/api/Patients
+Accept: application/json
+
+### 
+
+GET http://localhost:57678/swagger/index.html
