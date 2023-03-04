@@ -6,9 +6,11 @@ This is the client component inteded to work with the Patient Manager Service (A
 
 The following are  instructions for installing the code.
 
-0) Ensure you have node installed.
+0) Ensure you have node installed as well as the angular cli
 
    At a command prompt, type `node -v` to ensure you have version `14.15.0` or higher before proceeding.
+
+   Ensure you have the angular cli installed.  If not, type `npm install -g @angular/cli` at the command prompt
 
 1) Download or clone the code from this repository.
 
